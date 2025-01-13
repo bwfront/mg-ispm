@@ -35,9 +35,6 @@ return [
             'loginLogo' => '',
             'loginLogoAlt' => '',
         ],
-        'blog_example' => [
-            'foo' => 'bar',
-        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
@@ -114,6 +111,7 @@ return [
         'sitename' => 'ISPM',
         'systemMaintainers' => [
             1,
+            2,
         ],
     ],
 ];
