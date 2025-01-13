@@ -34,3 +34,13 @@ config {
     concatenateJs = 0
     concatenateCss = 0
 }
+config {
+  debug = 1
+  no_cache = 1
+  contentObjectExceptionHandler = 0
+}
+
+# HELPER
+@import 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Helper/DynamicContent.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Helper/ParseFunc.typoscript'
