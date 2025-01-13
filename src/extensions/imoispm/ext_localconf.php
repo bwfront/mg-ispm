@@ -15,11 +15,11 @@ ExtensionUtility::configurePlugin(
     'imoispm',
     'ispmfrontend',
     [
-        ISPMFrontendController::class => 'dispatch, list, show, newObject, newUnit, createUnit, createObject, editUnit, updateUnit, editObject, updateObject, deleteUnit, deleteObject, checkChiffre, chiffre, showObjectByChiffre, saveUserData, successSaveUserData',
+        ISPMFrontendController::class => 'chiffre, checkChiffre, showObjectByChiffre, saveUserData, successSaveUserData',
     ],
     // non-cacheable actions
     [
-        ISPMFrontendController::class => 'dispatch, createObject, createUnit, updateUnit, updateObject, deleteUnit, deleteObject, checkChiffre, saveUserData, successSaveUserData',
+        ISPMFrontendController::class => 'checkChiffre, saveUserData, successSaveUserData',
     ],
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );

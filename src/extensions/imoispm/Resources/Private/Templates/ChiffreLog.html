@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
 
     <f:flashMessages />
-
     <h1 class="mt-2"><f:translate key="ispm.show.objects.headline" />:</h1>
 
     <table class="table table-striped">
@@ -44,8 +43,8 @@
                     {imoObject.postalcode}
                 </td>
                 <td>
-                    <f:link.action action="edit" arguments="{imoObject: imoObject}" class="btn btn-primary btn-sm"><f:translate key="ispm.button.edit" /></f:link.action>
-                    <f:link.action action="delete" arguments="{imoObject: imoObject}" class="btn btn-danger btn-sm"><f:translate key="ispm.button.delete" /></f:link.action>
+                    <f:link.action action="editObject" arguments="{imoObject: imoObject}" class="btn btn-primary btn-sm"><f:translate key="ispm.button.edit" /></f:link.action>
+                    <f:link.action action="deleteObject" arguments="{imoObject: imoObject}" class="btn btn-danger btn-sm"><f:translate key="ispm.button.delete" /></f:link.action>
                 </td>
             </tr>
         </tbody>

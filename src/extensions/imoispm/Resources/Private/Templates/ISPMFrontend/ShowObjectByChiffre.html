@@ -1,9 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-    <f:layout name="Default" />
-    
-    <f:section name="Main">
 
-    <div class="row">
+<div class="row">
         <div class="col-12 col-md-6">
             <p>Hallo Interessent, Sie interessieren sich für das Gebot Ihres Objektes.</p>
             <p>Unter der Chiffre {r.imoUnit.chiffre} wurden vom Bieter folgende Daten hinterlegt.</p>
@@ -41,7 +38,7 @@
                 <f:form.hidden property="chiffre" name="chiffre" value="{r.imoUnit.chiffre}" />
                 <f:form.hidden property="unitnr" name="unitnr" value="{r.imoUnit.uid}" />
                 <f:form.hidden property="objectnr" name="objectnr" value="{r.imoObject.uid}" />
-                <f:render partial="UserData/FormFields" />
+                <f:render partial="ISPMFrontend/UserData/FormFields" />
                 <div class="d-grid mt-3">
                     <f:form.submit value="{f:translate(key: 'fe.ispm.form.button.send')}" class="btn btn-warning btn-lg" />
                 </div>
@@ -50,6 +47,4 @@
         </div>
     </div>
         
-    </f:section>
-
 </html>

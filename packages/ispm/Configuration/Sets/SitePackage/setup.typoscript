@@ -19,3 +19,9 @@ page {
         ispm_scripts = EXT:ispm/Resources/Public/JavaScript/main.js
     }
 }
+
+config {
+  debug = 1
+  no_cache = 1
+  contentObjectExceptionHandler = 0
+}

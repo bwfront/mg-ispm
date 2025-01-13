@@ -14,7 +14,7 @@ return [
         'iconIdentifier' => 'tx_imoispm_icon',
         'controllerActions' => [
             ISPMBackendController::class => [
-                'listObject', 'showObject', 'newObject', 'createObject', 'editObject', 'deleteObject', 'updateObject', 'newUnit', 'createUnit', 'deleteUnit', 'editUnit', 'updateUnit', 'chiffreLog', 'listUserData'
+                'listObject', 'showObject', 'newObject', 'createObject', 'editObject', 'deleteObject', 'updateObject', 'newUnit', 'createUnit', 'deleteUnit', 'editUnit', 'updateUnit', 'chiffreLog', 'listUserData', 'deleteUserData'
             ],
         ],
     ],

@@ -1,11 +1,11 @@
 @import './TypoScript/'
-plugin.tx_imoispm_ispmfrontend {
-    view {
-        templateRootPaths.0 = EXT:imoispm/Resources/Private/Templates/
-        partialRootPaths.0 = EXT:imoispm/Resources/Private/Partials/
-        layoutRootPaths.0 = EXT:imoispm/Resources/Private/Layouts/
-    }
-    persistence {
-        storagePid = 1
-    }
-}
+// plugin.tx_imoispm_ispmfrontend {
+//     view {
+//         templateRootPaths.0 = EXT:imoispm/Resources/Private/Templates/
+//         partialRootPaths.0 = EXT:imoispm/Resources/Private/Partials/
+//         layoutRootPaths.0 = EXT:imoispm/Resources/Private/Layouts/
+//     }
+//     persistence {
+//         storagePid = 1
+//     }
+// }

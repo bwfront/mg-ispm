@@ -152,8 +152,8 @@ class ISPMBackendController extends ActionController
         $this->userDataRepository->remove($userData);
         $this->persistenceManager->persistAll();
 
-        $title = LocalizationUtility::translate('ispm.form.title.ok', 'ispm');
-        $message = LocalizationUtility::translate('ispm.form.message.object.deleted', 'ispm');
+        $title = LocalizationUtility::translate('ispm.form.title.ok', 'imoispm');
+        $message = LocalizationUtility::translate('ispm.form.message.object.deleted', 'imoispm');
         $this->addFlashMessage($message, $title, ContextualFeedbackSeverity::ERROR);
 
         $arguments = ['imoObject' => $imoObject, 'imoUnit' => $imoUnit];

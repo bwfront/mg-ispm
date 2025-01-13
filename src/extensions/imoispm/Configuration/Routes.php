@@ -1,12 +1,12 @@
 <?php
 
-use Mg\Imoispm\Frontend\Controller\ISPMFrontendController;
+// use Mg\Imoispm\Frontend\Controller\ISPMFrontendController;
 
-return [
-    'frontend' => [
-        'chiffre' => [
-            'path' => '/chiffre',
-            'target' => ISPMFrontendController::class . '::chiffre',
-        ],
-    ],
-];
+// return [
+//     'frontend' => [
+//         'chiffre' => [
+//             'path' => '/chiffre',
+//             'target' => ISPMFrontendController::class . '::chiffre',
+//         ],
+//     ],
+// ];

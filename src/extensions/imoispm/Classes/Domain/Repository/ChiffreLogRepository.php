@@ -20,6 +20,7 @@ class ChiffreLogRepository extends Repository
     public function addLog(string $chiffre, string $usercookie, string $userip, int $objectnr, int $unitnr): void
     {
         $log = new ModelChiffreLog();
+        $log->setPid(1);
         $log->setChiffre($chiffre);
         $log->setUsercookie($usercookie);
         $log->setUserip($userip);
