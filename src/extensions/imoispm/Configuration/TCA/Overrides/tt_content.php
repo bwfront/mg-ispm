@@ -11,6 +11,8 @@ $pluginSignature = ExtensionUtility::registerPlugin(
     $extensionKey,
     $pluginName,
     $pluginTitle,
+    null,
+    ""
 );
 
 // // FlexForm

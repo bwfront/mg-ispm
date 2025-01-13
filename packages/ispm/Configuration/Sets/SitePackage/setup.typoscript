@@ -1,0 +1,21 @@
+page {
+    includeCSS {
+        theme = EXT:ispm/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        ispm_scripts = EXT:ispm/Resources/Public/JavaScript/main.js
+    }
+}

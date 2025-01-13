@@ -1,4 +1,6 @@
 base: 'https://ispm-typo3-v13.4.ddev.site/'
+dependencies:
+  - mg/imoispm
 languages:
   -
     title: English

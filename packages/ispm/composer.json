@@ -1,0 +1,21 @@
+{
+    "name": "mediagear/ispm",
+    "type": "typo3-cms-extension",
+    "description": "ispm site package",
+    "homepage": "https://ispm-typo3-v13.4.ddev.site/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^15.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mediagear\\Ispm\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ispm"
+        }
+    }
+}
