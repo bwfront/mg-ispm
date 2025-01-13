@@ -1,0 +1,70 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+    
+    <h1><f:translate key="ispm.edit.units.headline" />:</h1>
+
+    <f:flashMessages />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.city" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.street" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.streetnumber" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.postalcode" />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {imoObject.city}
+                </td>
+                <td>
+                    {imoObject.street}
+                </td>
+                <td>
+                    {imoObject.streetnumber}
+                </td>
+                <td>
+                    {imoObject.postalcode}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <f:render partial="FormErrors" />
+    <div class="w-50">
+        <div class="mb-3">
+            <label class="form-label">
+                <f:translate key="tx_ispm_domain_model_imochiffre.chiffre" />
+            </label>
+            <f:form.textfield class="form-control" value="{imoUnit.chiffre}" disabled="true"/>
+        </div>
+
+        <f:form action="updateUnit" name="imoUnit" object="{imoUnit}">
+            <f:render partial="ImoUnits/FormFields" arguments="{imoUnits: imoUnit}" />
+            <f:form.hidden name="chiffre" value="{imoUnit.chiffre}" />
+            <f:render partial="SelectUser/FormFields" arguments="{_all}"/>
+            <f:link.action action="show" arguments="{imoObject: imoObject}" class="btn btn-default"><f:translate key="ispm.button.cancel" /></f:link.action>
+            <f:form.submit value="{f:translate(key: 'ispm.button.save')}" class="btn btn-primary" />
+        </f:form>
+
+
+    </div>
+
+</f:section>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ispm/Resources/Private/Language/locallang_csh_tx_ispm_domain_model_imoobjects.xlf" date="2024-03-27T18:21:19Z" product-name="imomanager">
+		<header/>
+		<body>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="state.description" resname="state.description">
+				<source>state</source>
+			</trans-unit>
+			<trans-unit id="street.description" resname="street.description">
+				<source>street</source>
+			</trans-unit>
+			<trans-unit id="streetnumber.description" resname="streetnumber.description">
+				<source>streetnumber</source>
+			</trans-unit>
+			<trans-unit id="postalcode.description" resname="postalcode.description">
+				<source>postalcode</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

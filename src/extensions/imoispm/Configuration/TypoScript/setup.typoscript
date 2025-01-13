@@ -1,0 +1,10 @@
+plugin.tx_imoispm {
+    view {
+        templateRootPaths.0 = EXT:imoispm/Resources/Private/Frontend/Templates/Page
+        partialRootPaths.0 = EXT:imoispm/Resources/Private/Frontend/Partials/Page
+        layoutRootPaths.0 = EXT:imoispm/Resources/Private/Frontend/Layouts/Page
+    }
+    persistence {
+        storagePid = 1
+    }
+}

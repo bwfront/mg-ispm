@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div class="form-group">
+        <label for="salutation">
+            <f:translate key="tx_ispm_domain_model_userdata.salutation" /><span class="text-danger">*</span>
+        </label>
+        <f:form.select 
+            class="form-control" 
+            property="salutation" 
+            id="salutation"
+            options="{ 'ms': 'Frau', 'mr': 'Herr' }" 
+            optionLabelField="value" 
+            optionValueField="key" />
+    </div>
+    <div class="form-group">
+        <label for="firstname">
+            <f:translate key="tx_ispm_domain_model_userdata.firstname" /><span class="text-danger">*</span>
+        </label>
+        <f:form.textfield class="form-control" property="firstname" id="firstname" required="true"/>
+    </div>
+    <div class="form-group">
+        <label for="surname">
+            <f:translate key="tx_ispm_domain_model_userdata.surname" /><span class="text-danger">*</span>
+        </label>
+        <f:form.textfield class="form-control" property="surname" id="surname" required="true"/>
+    </div>
+    <div class="form-group">
+        <label for="email">
+            <f:translate key="tx_ispm_domain_model_userdata.email" /><span class="text-danger">*</span>
+        </label>
+        <f:form.textfield class="form-control" property="email" id="email" type="email" required="true"/>
+    </div>
+    <div class="form-group">
+        <label for="telefon">
+            <f:translate key="tx_ispm_domain_model_userdata.telefon" />
+        </label>
+        <f:form.textfield class="form-control" property="telefon" id="telefon" />
+    </div>
+</html>

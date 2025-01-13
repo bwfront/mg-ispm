@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-02-09UTC16:14:570">
+        <header>
+            <authorName>Bennet Witczak </authorName>
+            <authorEmail>bennet.witczak@mediagear.de</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="tx_ispm_ispmfrontend.name" resname="tx_ispm_ispmfrontend.name">
+				<source>ISPM</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_ispmfrontend.description" resname="tx_ispm_ispmfrontend.description">
+				<source>ISPM</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects" resname="tx_ispm_domain_model_imoobjects">
+				<source>Imo Objekte</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.description" resname="tx_ispm_domain_model_imoobjects.description">
+				<source>Imo Objekte</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.city" resname="tx_ispm_domain_model_imoobjects.city">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.city.description" resname="tx_ispm_domain_model_imoobjects.city.description">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.state" resname="tx_ispm_domain_model_imoobjects.state">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.state.description" resname="tx_ispm_domain_model_imoobjects.state.description">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.street" resname="tx_ispm_domain_model_imoobjects.street">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.street.description" resname="tx_ispm_domain_model_imoobjects.street.description">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.streetnumber" resname="tx_ispm_domain_model_imoobjects.streetnumber">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.streetnumber.description" resname="tx_ispm_domain_model_imoobjects.streetnumber.description">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.postalcode" resname="tx_ispm_domain_model_imoobjects.postalcode">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imoobjects.postalcode.description" resname="tx_ispm_domain_model_imoobjects.postalcode.description">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits" resname="tx_ispm_domain_model_imounits">
+				<source>Imo Einheiten</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.description" resname="tx_ispm_domain_model_imounits.description">
+				<source>Imo Einheiten</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.chiffre" resname="tx_ispm_domain_model_imounits.chiffre">
+				<source>Chiffre</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.chiffre.description" resname="tx_ispm_domain_model_imounits.chiffre.description">
+				<source>Chiffre</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.number" resname="tx_ispm_domain_model_imounits.number">
+				<source>Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.number.description" resname="tx_ispm_domain_model_imounits.number.description">
+				<source>Unit Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.placeholder" resname="tx_ispm_domain_model_imounits.placeholder">
+				<source>Platzhalter</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.placeholder.description" resname="tx_ispm_domain_model_imounits.placeholder.description">
+				<source>Platzhalter</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.offer" resname="tx_ispm_domain_model_imounits.offer">
+				<source>Preis Angebot</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imounits.offer.description" resname="tx_ispm_domain_model_imounits.offer.description">
+				<source>Preis Angebot</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre" resname="tx_ispm_domain_model_imochiffre">
+				<source>Imo Chiffre</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.description" resname="tx_ispm_domain_model_imochiffre.description">
+				<source>Imo Chiffre</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.chiffre" resname="tx_ispm_domain_model_imochiffre.chiffre">
+				<source>Chiffre</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.chiffre.description" resname="tx_ispm_domain_model_imochiffre.chiffre.description">
+				<source>The Chiffre serves as a unique identifier to facilitate the identification and search of specific units. It's used for quick access and reference to the associated unit within the system.</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.objectnr" resname="tx_ispm_domain_model_imochiffre.objectnr">
+				<source>Objekt</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.objectnr.description" resname="tx_ispm_domain_model_imochiffre.objectnr.description">
+				<source>Wähle ein Objekt aus</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.unitnr" resname="tx_ispm_domain_model_imochiffre.unitnr">
+				<source>Einheit Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.unitnr.description" resname="tx_ispm_domain_model_imochiffre.unitnr.description">
+				<source>Einheit Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.fe_user" resname="tx_ispm_domain_model_imochiffre.fe_user">
+				<source>Benutzer</source>
+			</trans-unit>
+			<trans-unit id="tx_ispm_domain_model_imochiffre.fe_user.description" resname="tx_ispm_domain_model_imochiffre.fe_user.description">
+				<source>Wähle ein Benutzer aus</source>
+			</trans-unit>
+            <trans-unit id="tx_ispm_domain_model_chiffrelog" xml:space="preserve">
+                <source>Chiffre-Logbuch</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_chiffrelog.chiffre" xml:space="preserve">
+                <source>Chiffre</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_chiffrelog.usercookie" xml:space="preserve">
+                <source>Benutzer-Cookie</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_chiffrelog.userip" xml:space="preserve">
+                <source>Benutzer-IP</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_chiffrelog.objectnr" xml:space="preserve">
+                <source>Objektnummer</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_chiffrelog.unitnr" xml:space="preserve">
+                <source>Einheitsnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_userdata" xml:space="preserve">
+                <source>Benutzer-Daten</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_userdata.chiffre" xml:space="preserve">
+                <source>Chiffre</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_userdata.usercookie" xml:space="preserve">
+                <source>Benutzer-Cookie</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_userdata.userip" xml:space="preserve">
+                <source>Benutzer-IP</source>
+            </trans-unit>
+            <trans-unit id="tx_ispm_domain_model_userdata.objectnr" xml:space="preserve">
+                <source>Objektnummer</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.unitnr" xml:space="preserve">
+                <source>Einheitsnummer</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.salutation" xml:space="preserve">
+                <source>Anrede</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.firstname" xml:space="preserve">
+                <source>Vorname</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.surname" xml:space="preserve">
+                <source>Nachname</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.email" xml:space="preserve">
+                <source>eMail</source>
+            </trans-unit>
+			<trans-unit id="tx_ispm_domain_model_userdata.telefon" xml:space="preserve">
+                <source>Telefon</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <type>array</type>
+        <el>
+          <settings.action>
+            <label>Aktion auswählen</label>
+            <config>
+              <type>select</type>
+              <renderType>selectSingle</renderType>
+              <items>
+                <numIndex index="0">
+                  <numIndex index="0">Dashboard</numIndex>
+                  <numIndex index="1">list</numIndex>
+                </numIndex>
+                <numIndex index="1">
+                  <numIndex index="0">Chiffre</numIndex>
+                  <numIndex index="1">chiffre</numIndex>
+                </numIndex>
+              </items>
+            </config>
+          </settings.action>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

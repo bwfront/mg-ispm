@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="row mb-3">
+		<div class="col-md-9">
+			<label for="city" class="form-label">
+				<f:translate key="tx_ispm_domain_model_imoobjects.city" />
+			</label>
+			<f:form.textfield class="form-control" property="city" id="city" required="required" placeholder="München"/>
+		</div>
+		<div class="col-md-2">
+			<label for="postalcode" class="form-label">
+				<f:translate key="tx_ispm_domain_model_imoobjects.postalcode" />
+			</label>
+			<f:form.textfield class="form-control" property="postalcode" id="postalcode" required="required" placeholder="01234"/>
+		</div>
+	</div>
+	<div class="row mb-3">
+		<div class="col-md-9">
+			<label for="street" class="form-label">
+				<f:translate key="tx_ispm_domain_model_imoobjects.street" />
+			</label>
+			<f:form.textfield class="form-control" property="street" id="street" required="required" placeholder="Maximilianstraße"/>
+		</div>
+		<div class="col-md-2">
+			<label for="streetnumber" class="form-label">
+				<f:translate key="tx_ispm_domain_model_imoobjects.streetnumber" />
+			</label>
+			<f:form.textfield class="form-control" property="streetnumber" id="streetnumber" required="required" placeholder="1"/>
+		</div>
+	</div>
+	<div class="row mb-3">
+		<div class="col-md-9">
+			<label for="state" class="form-label">
+				<f:translate key="tx_ispm_domain_model_imoobjects.state" />
+			</label>
+			<f:form.textfield class="form-control" property="state" id="state" required="required" placeholder="Bayern" />
+		</div>
+	</div>
+</html>

@@ -1,0 +1,206 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+    <f:flashMessages />
+
+    <h1 class="mt-2"><f:translate key="ispm.show.objects.headline" />:</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.city" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.street" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.streetnumber" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imoobjects.postalcode" />
+                </th>
+                <th><f:translate key="ispm.table.actions" /></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {imoObject.city}
+                </td>
+                <td>
+                    {imoObject.street}
+                </td>
+                <td>
+                    {imoObject.streetnumber}
+                </td>
+                <td>
+                    {imoObject.postalcode}
+                </td>
+                <td>
+                    <f:link.action action="edit" arguments="{imoObject: imoObject}" class="btn btn-primary btn-sm"><f:translate key="ispm.button.edit" /></f:link.action>
+                    <f:link.action action="delete" arguments="{imoObject: imoObject}" class="btn btn-danger btn-sm"><f:translate key="ispm.button.delete" /></f:link.action>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imounits.chiffre" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imounits.number" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imounits.placeholder" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imounits.offer" />
+                </th>
+                <th>
+                    <f:translate key="ispm.user" />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{imoUnit.chiffre}</td>
+                <td>{imoUnit.number}</td>
+                <td>{imoUnit.placeholder}</td>
+                <td>{imoUnit.offer}</td>
+                <td>{imoUnit.userName}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1 class="mt-4">
+        <f:translate key="ispm.chiffrelog.listUserData.headline" />:
+    </h1>
+
+    <f:if condition="{userData}">
+        <f:then>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                        <f:translate key="ispm.listUserData.table.date" />
+                        </th>
+                        <th>
+                            <f:translate key="tx_ispm_domain_model_userdata.salutation" /> 
+                            <f:translate key="tx_ispm_domain_model_userdata.surname" />,
+                            <f:translate key="tx_ispm_domain_model_userdata.firstname" />
+                        </th>
+                        <th>
+                            <f:translate key="tx_ispm_domain_model_userdata.email" />
+                        </th>
+
+                        <th>
+                            <f:translate key="tx_ispm_domain_model_userdata.telefon" />
+                        </th>
+                        <th>
+                            <f:translate key="tx_ispm_domain_model_userdata.usercookie" />
+                        </th>
+                        <th><f:translate key="ispm.table.actions" /></th>
+                    </tr>
+                </thead>
+                <f:for each="{userData}" as="user" iteration="i">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <f:format.date format="d.m.Y H:i:s">{user.tstamp}</f:format.date>
+                            </td>
+                            <td>
+                            <f:translate key="fe.ispm.{user.salutation}" /> {user.surname}, {user.firstname}
+                            </td>
+                            <td> 
+                                <a class="text-primary" href="mailto:{user.email}">{user.email}</a>
+                            </td>
+                            <td>
+                                <f:if condition="{user.telefon}">
+                                    <f:then>
+                                        <a class="text-primary" href="tel:{user.telefon}">{user.telefon}</a>
+                                    </f:then>
+                                    <f:else>
+                                        /
+                                    </f:else>
+                                </f:if>
+                            </td>
+                            <td>
+                                {user.usercookie}
+                            </td>
+                            <td>
+                                <f:link.action action="deleteUserData" arguments="{userData: user, imoObject: imoObject, imoUnit: imoUnit}" class="btn btn-danger btn-sm"><f:translate key="ispm.button.delete" /></f:link.action>
+                            </td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </f:then>
+        <f:else>
+            <div><f:translate key="ispm.chiffrelog.listUserData.no.interested.parties" /></div>
+        </f:else>
+    </f:if>
+
+    <h1 class="mt-4">
+        <f:translate key="ispm.chiffrelogs.headline.02" arguments="{chiffreLogsCount: chiffreLogsCount}"/>
+    </h1>
+
+    <f:for each="{chiffreLogs}" as="chiffrelog" key="key">
+        <h1>
+        </h1>
+        <table class="table table-striped">
+            <tr>
+                <thead>
+                    <th>
+                       <f:translate key="ispm.chiffrelogs.table.cookie" />
+                    </th>
+                    <th>
+                        <f:translate key="ispm.chiffrelogs.table.call" />
+                    </th>
+                </thead>
+            </tr>
+            <tr>
+                <td>
+                    {key} 
+                </td>
+                <td>
+                    {chiffrelog -> f:count()}
+                </td>
+            </tr>
+            <tr>
+                <thead>
+                    <th>
+                       <f:translate key="ispm.chiffrelogs.table.date" />
+                    </th>
+                    <th>
+                       <f:translate key="ispm.chiffrelogs.table.ip" />
+                    </th>
+                </thead>
+            </tr>
+            <tbody>
+                <f:for each="{chiffrelog}" as="logs" iteration="i">
+                    <tr>
+                        <td>
+                            <f:format.date format="d.m.Y H:i:s">{logs.tstamp}</f:format.date>
+                        </td>
+                        <td>
+                            {logs.userip}
+                        </td>
+                    </tr>
+                </f:for>
+            </tbody>
+        </table>
+    </f:for>
+
+</f:section>
+
+</html>

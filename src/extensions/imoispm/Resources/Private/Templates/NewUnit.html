@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+    <h1><f:translate key="ispm.new.units.headline" />:</h1>
+
+    <f:flashMessages />
+
+    <f:render partial="FormErrors" />
+
+    <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>
+                  <f:translate key="tx_ispm_domain_model_imoobjects.city" />
+              </th>
+              <th>
+                  <f:translate key="tx_ispm_domain_model_imoobjects.street" />
+              </th>
+              <th>
+                  <f:translate key="tx_ispm_domain_model_imoobjects.streetnumber" />
+              </th>
+              <th>
+                  <f:translate key="tx_ispm_domain_model_imoobjects.postalcode" />
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>
+                  {imoObject.city}
+              </td>
+              <td>
+                  {imoObject.street}
+              </td>
+              <td>
+                  {imoObject.streetnumber}
+              </td>
+              <td>
+                  {imoObject.postalcode}
+              </td>
+          </tr>
+      </tbody>
+    </table>
+
+  <f:form action="createUnit" name="newImoUnit" object="{newImoUnit}">
+    <f:form.hidden name="objectuid" value="{imoObject.uid}" />
+    <div class="w-50">
+      <f:render partial="ImoUnits/FormFields" />
+      <f:render partial="SelectUser/FormFields" arguments="{_all}"/>
+    </div>
+    <div class="button-con">
+      <f:link.action action="showObject" arguments="{imoObject: imoObject}" class="btn btn-default"><f:translate key="ispm.button.cancel" /></f:link.action>
+      <f:form.submit value="{f:translate(key: 'ispm.button.create')}" class="btn btn-primary" />
+    </div>
+  </f:form>
+
+</f:section>
+
+</html>

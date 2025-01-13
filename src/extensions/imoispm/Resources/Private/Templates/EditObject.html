@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+  <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+  <h1><f:translate key="ispm.edit.objects.headline" />:</h1>
+
+  <f:flashMessages />
+
+  <f:render partial="FormErrors" />
+
+  <f:form action="updateObject" name="imoObject" object="{imoObject}">
+    <div class="w-50">
+      <f:render partial="ImoObjects/FormFields" arguments="{imoObjects: imoObjects}" />
+    </div>
+    <f:link.action action="showObject" arguments="{imoObject: imoObject}" class="btn btn-default"><f:translate key="ispm.button.cancel" /></f:link.action>
+    <f:form.submit value="{f:translate(key: 'ispm.button.save')}" class="btn btn-primary" />
+  </f:form>
+
+</f:section>
+
+</html>

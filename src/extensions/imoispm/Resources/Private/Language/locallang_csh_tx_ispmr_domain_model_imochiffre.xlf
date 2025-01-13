@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ispm/Resources/Private/Language/locallang_csh_tx_ispm_domain_model_imochiffre.xlf" date="2024-03-27T18:21:19Z" product-name="imomanager">
+		<header/>
+		<body>
+			<trans-unit id="chiffre.description" resname="chiffre.description">
+				<source>chiffre</source>
+			</trans-unit>
+			<trans-unit id="objectnr.description" resname="objectnr.description">
+				<source>objectnr</source>
+			</trans-unit>
+			<trans-unit id="unitnr.description" resname="unitnr.description">
+				<source>unitnr</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

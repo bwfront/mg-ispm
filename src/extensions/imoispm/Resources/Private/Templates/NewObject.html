@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+
+<f:section name="Content">
+
+  <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+  <h1><f:translate key="ispm.new.objects.headline" />:</h1>
+
+  <f:flashMessages />
+
+  <f:render partial="FormErrors" />
+
+  <f:form action="createObject" name="newImoObjects" object="{newImoObjects}">
+    <div class="w-50">
+      <f:render partial="ImoObjects/FormFields" />
+    </div>
+    <div class="form-group">
+        <f:form.submit value="{f:translate(key: 'ispm.button.create')}" class="btn btn-primary" />
+    </div>
+  </f:form>
+
+</f:section>
+
+</html>

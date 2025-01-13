@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+    <f:flashMessages />
+
+    <h1 class="mt-2"><f:translate key="ispm.listUserData.headline" />:</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_imochiffre.chiffre" />
+                </th>
+                <th>
+                   <f:translate key="ispm.listUserData.table.date" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_userdata.salutation" /> 
+                    <f:translate key="tx_ispm_domain_model_userdata.surname" />,
+                    <f:translate key="tx_ispm_domain_model_userdata.firstname" />
+                </th>
+                <th>
+                    <f:translate key="tx_ispm_domain_model_userdata.email" />
+                </th>
+                <th><f:translate key="ispm.table.actions" /></th>
+            </tr>
+        </thead>
+        <f:for each="{detailedUserDataList}" as="detailedUserData" iteration="i">
+            <tbody>
+                <tr>
+                    <td>
+                      {detailedUserData.userData.chiffre}
+                    </td>
+                    <td>
+                        <f:format.date format="d.m.Y H:i:s">{detailedUserData.userData.tstamp}</f:format.date>
+                    </td>
+                    <td>
+                       <f:translate key="fe.ispm.{detailedUserData.userdata.salutation}" /> {detailedUserData.userData.surname}, {detailedUserData.userData.firstname}
+                    </td>
+                    <td> 
+                        <a class="text-primary" href="mailto:{detailedUserData.userData.email}">{detailedUserData.userData.email}</a>
+                    </td>
+                    <td>
+                        <f:link.action action="chiffreLog" arguments="{imoObject: detailedUserData.imoObject, imoUnit: detailedUserData.imoUnit}" class="btn btn-primary btn-sm"><f:translate key="ispm.button.show" /></f:link.action>
+                    </td>
+                </tr>
+            </tbody>
+        </f:for>
+
+    </table>
+
+</f:section>
+
+</html>

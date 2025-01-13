@@ -1,0 +1,56 @@
+<f:section name="default">
+    <f:if condition="{totalPages} > 1">
+        <nav aria-label="Page navigation">
+            <ul class="pagination m-0">
+                <f:if condition="{currentPage} > 1">
+                    <li class="page-item">
+                        <f:form action="list">
+                            <f:form.hidden name="sort" value="{sortField}" />
+                            <f:form.hidden name="direction" value="{sortDirection}" />
+                            <f:form.hidden name="userid" value="{userInfo.currentUserId}" />
+                            <f:form.hidden name="page" value="{currentPage - 1}" />
+                            <f:form.submit name="submit" value="{f:translate(key: 'ispm.pagination.previous')}" class="btn btn-light"/>
+                        </f:form>
+                    </li>
+                </f:if>
+
+                <f:for each="{pages}" as="item">
+                    <f:if condition="{item} == 'ellipsis_start' || {item} == 'ellipsis_end'">
+                        <f:then>
+                            <li class="page-item disabled"><span class="page-link">…</span></li>
+                        </f:then>
+                        <f:else>
+                            <f:variable name="btnclass" value="light"></f:variable>
+                            <f:if condition="{item} == {currentPage}">
+                                <f:then>
+                                    <f:variable name="btnclass" value="primary"></f:variable>
+                                </f:then>
+                            </f:if>
+                            <li class="page-item {f:if(condition: item == currentPage, then: 'active')}">
+                                <f:form action="list">
+                                    <f:form.hidden name="sort" value="{sortField}" />
+                                    <f:form.hidden name="direction" value="{sortDirection}" />
+                                    <f:form.hidden name="userid" value="{userInfo.currentUserId}" />
+                                    <f:form.hidden name="page" value="{item}" />
+                                    <f:form.submit value="{item}" class="btn btn-{btnclass}" />
+                                </f:form>
+                            </li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+
+                <f:if condition="{currentPage} < {totalPages}">
+                    <li class="page-item">
+                        <f:form action="list">
+                            <f:form.hidden name="sort" value="{sortField}" />
+                            <f:form.hidden name="direction" value="{sortDirection}" />
+                            <f:form.hidden name="userid" value="{userInfo.currentUserId}" />
+                            <f:form.hidden name="page" value="{currentPage + 1}" />
+                            <f:form.submit name="submit" value="{f:translate(key: 'ispm.pagination.next')}" class="btn btn-light"/>
+                        </f:form>
+                    </li>
+                </f:if>
+            </ul>
+        </nav>
+    </f:if>
+</f:section>

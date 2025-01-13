@@ -1,0 +1,29 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Mg\Imoispm\Hooks\DataMapHookHandler:
+    arguments:
+      $imoChiffreRepository: '@Mg\Imoispm\Domain\Repository\ImoChiffreRepository'
+      $chiffreGenerator: '@Mg\Imoispm\Utility\ChiffreGenerator'
+      
+  Mg\Imoispm\:
+    resource: '../Classes/'
+    exclude: '../Classes/Domain/Model/*'
+
+  Mg\Imoispm\Backend\Controller\ISPMBackendController:
+    arguments:
+      $moduleTemplateFactory: '@TYPO3\CMS\Backend\Template\ModuleTemplateFactory'
+      $imoChiffreRepository: '@Mg\Imoispm\Domain\Repository\ImoChiffreRepository'
+      $imoUnitsRepository: '@Mg\Imoispm\Domain\Repository\ImoUnitsRepository'
+      $imoObjectsRepository: '@Mg\Imoispm\Domain\Repository\ImoObjectsRepository'
+      $chiffreLogRepository: '@Mg\Imoispm\Domain\Repository\ChiffreLogRepository'
+      $userDataRepository: '@Mg\Imoispm\Domain\Repository\UserDataRepository'
+      $chiffreGenerator: '@Mg\Imoispm\Utility\ChiffreGenerator'
+      $frontendUserRepository: '@Mg\Imoispm\Domain\Repository\FrontendUserRepository'
+      $querySettings: '@TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface'
+      $persistenceManager: '@TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface'
+    tags:
+      - backend.controller

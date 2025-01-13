@@ -1,0 +1,182 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <!-- <div class="mb-3">
+        <h4>Generate Test Data</h4>
+        <f:link.action action="generateRandomImoObjectWithUnits" class="btn btn-info">Generate Random ImoObjects With Units</f:link.action>
+    </div> -->
+
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/style.css')}" media="all">
+
+    <h1><f:translate key="ispm.list.objects.headline" />:</h1>
+
+    <f:flashMessages />
+
+    <div class="d-flex align-items-center gap-3 justify-content-between">
+        <div class="d-flex align-items-end gap-2">
+            <f:form action="listObject">
+                <div class="d-flex align-items-end gap-2">
+                    <div class="mb-4">
+                        <div><f:translate key="ispm.list.filter" />:</div>
+                    </div>
+                    <f:render partial="SelectUser/FormFields" arguments="{_all}"/>
+                    <f:form.hidden name="sort" value="{sortField}" />
+                    <f:form.hidden name="direction" value="{sortDirection}" />
+                    <div class="form-group mb-3">
+                        <f:form.submit value="{f:translate(key: 'ispm.button.search')}" class="btn btn-default" />
+                    </div>
+                    <div class="button-con mb-3">
+                        <f:link.action action="listObject" class="btn btn-danger">
+                            <f:translate key="ispm.button.reset" />
+                        </f:link.action>
+                    </div>
+                </div>
+            </f:form>
+            <div class="button-con mb-3">
+                <f:render section="default" partial="Pagination/ListPagination" arguments="{_all}" />
+            </div>
+        </div>
+        <div class="button-con mb-2">
+            <f:link.action action="newObject" class="btn btn-primary">
+                <f:translate key="ispm.object.button.create" />
+            </f:link.action>
+        </div>
+    </div>
+    <div class="mb-3">
+        <f:translate key="ispm.list.count.results.found" arguments="{totalResults: totalResults}"/>
+    </div>
+
+    <f:if condition="{imoObjects}">
+        <f:then>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <f:link.action action="listObject" arguments="{ 
+                                sort: 'city', 
+                                direction: newDirections.city, 
+                                userid: userInfo.currentUserId 
+                            }">
+                                <f:translate key="tx_ispm_domain_model_imoobjects.city" />
+                                <f:if condition="{sortField} == 'city'}">
+                                    <f:then>
+                                        <f:if condition="{sortDirection} == 'ASC'}">
+                                            ▲
+                                        </f:if>
+                                        <f:if condition="{sortDirection} == 'DESC'}">
+                                            ▼
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:link.action>
+                        </th>
+                        <th>
+                            <f:link.action action="listObject" arguments="{ 
+                                sort: 'street', 
+                                direction: newDirections.street, 
+                                userid: userInfo.currentUserId 
+                            }">
+                                <f:translate key="tx_ispm_domain_model_imoobjects.street" />
+                                <f:if condition="{sortField} == 'street'}">
+                                    <f:then>
+                                        <f:if condition="{sortDirection} == 'ASC'}">
+                                            ▲
+                                        </f:if>
+                                        <f:if condition="{sortDirection} == 'DESC'}">
+                                            ▼
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:link.action>
+                        </th>
+                        <th>
+                            <f:link.action action="listObject" arguments="{ 
+                                sort: 'streetnumber', 
+                                direction: newDirections.streetnumber, 
+                                userid: userInfo.currentUserId 
+                            }">
+                                <f:translate key="tx_ispm_domain_model_imoobjects.streetnumber" />
+                                <f:if condition="{sortField} == 'streetnumber'}">
+                                    <f:then>
+                                        <f:if condition="{sortDirection} == 'ASC'}">
+                                            ▲
+                                        </f:if>
+                                        <f:if condition="{sortDirection} == 'DESC'}">
+                                            ▼
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:link.action>
+                        </th>
+                        <th>
+                            <f:link.action action="listObject" arguments="{ 
+                                sort: 'postalcode', 
+                                direction: newDirections.postalcode, 
+                                userid: userInfo.currentUserId 
+                            }">
+                                <f:translate key="tx_ispm_domain_model_imoobjects.postalcode" />
+                                <f:if condition="{sortField} == 'postalcode'}">
+                                    <f:then>
+                                        <f:if condition="{sortDirection} == 'ASC'}">
+                                            ▲
+                                        </f:if>
+                                        <f:if condition="{sortDirection} == 'DESC'}">
+                                            ▼
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:link.action>
+                        </th>
+                        <th><f:translate key="ispm.table.actions" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <f:for each="{imoObjects}" as="imoObject">
+                        <tr>
+                            <td>
+                                <f:link.action action="showObject" arguments="{imoObject: imoObject}">{imoObject.city}</f:link.action>
+                            </td>
+                            <td>
+                                <f:link.action action="showObject" arguments="{imoObject: imoObject}">{imoObject.street}</f:link.action>
+                            </td>
+                            <td>
+                                <f:link.action action="showObject" arguments="{imoObject: imoObject}">{imoObject.streetnumber}</f:link.action>
+                            </td>
+                            <td>
+                                <f:link.action action="showObject" arguments="{imoObject: imoObject}">{imoObject.postalcode}</f:link.action>
+                            </td>
+                            <td>
+                                <f:link.action action="showObject" arguments="{imoObject: imoObject}" class="btn btn-primary btn-sm">                    
+                                    <f:translate key="ispm.button.show" />
+                                </f:link.action>
+                                <f:link.action action="editObject" arguments="{imoObject: imoObject}" class="btn btn-primary btn-sm">
+                                    <f:translate key="ispm.button.edit" />
+                                </f:link.action>
+                                <f:link.action action="deleteObject" arguments="{imoObject: imoObject}" class="btn btn-danger btn-sm">
+                                    <f:translate key="ispm.button.delete" />
+                                </f:link.action>
+                            </td>
+                        </tr>
+                    </f:for>
+                </tbody>
+            </table>
+        </f:then>
+        <f:else>
+            <div>
+                <span>
+                    <f:translate key="ispm.list.no.results.found" />
+                </span>
+                <f:link.action action="list" class="text-danger">
+                    <f:translate key="ispm.button.reset" />
+                </f:link.action>
+            </div>
+        </f:else>
+    </f:if>
+    
+</f:section>
+
+</html>
