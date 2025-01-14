@@ -14,7 +14,6 @@
 		"sort-packages": true
 	},
 	"require": {
-		"mediagear/ispm": "@dev",
 		"mg/imoispm": "@dev",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",

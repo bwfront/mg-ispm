@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "672bc0cd074ede363f655c03c1d828ef",
+    "content-hash": "9ee978ecb1646edd7428f19954e09a52",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1387,48 +1387,15 @@
             "time": "2024-03-31T07:05:07+00:00"
         },
         {
-            "name": "mediagear/ispm",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/ispm",
-                "reference": "3a016f00987de1fe2105252107ba02b7579c62ce"
-            },
-            "require": {
-                "bk2k/bootstrap-package": "^15.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "ispm"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mediagear\\Ispm\\": "Classes/"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "ispm site package",
-            "homepage": "https://ispm-typo3-v13.4.ddev.site/",
-            "keywords": [
-                "TYPO3 CMS"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "mg/imoispm",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "src/extensions/imoispm",
-                "reference": "38aec68ba47b55a8c621de6bae27c289241730b8"
+                "reference": "a0ee9c05d1da06d49aad5b48a359143746227648"
             },
             "require": {
+                "bk2k/bootstrap-package": "^15.0",
                 "typo3/cms-core": "^13.4",
                 "typo3/cms-fluid-styled-content": "^13.4",
                 "typo3/cms-rte-ckeditor": "^13.4"
@@ -7288,7 +7255,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mediagear/ispm": 20,
         "mg/imoispm": 20,
         "typo3/cms-lowlevel": 20,
         "b13/make": 20

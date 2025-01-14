@@ -1,4 +1,0 @@
-name: mediagear/ispm
-label: 'ispm'
-dependencies:
-  - bootstrap-package/full
