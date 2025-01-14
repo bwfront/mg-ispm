@@ -31,3 +31,12 @@ config {
     no_cache = 1
     contentObjectExceptionHandler = 0
 }
+
+plugin.tx_imoispm {
+    settings {
+        storagePid = 1
+    }
+    persistence {
+        storagePid = 1
+    }
+}

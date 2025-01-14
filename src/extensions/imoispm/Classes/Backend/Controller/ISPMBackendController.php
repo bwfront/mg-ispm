@@ -81,11 +81,8 @@ class ISPMBackendController extends ActionController
     /**
      * @var \PersistenceManagerInterface
      */
-    protected $persistenceManager = null;
-
-    protected $querySettings = null;
-    protected $storagePid = null;
-    
+    protected $persistenceManager;
+   
     public function __construct(
         protected readonly ModuleTemplateFactory $moduleTemplateFactory,
         ImoChiffreRepository $imoChiffreRepository,
@@ -106,22 +103,20 @@ class ISPMBackendController extends ActionController
         $this->chiffreGenerator = $chiffreGenerator;
         $this->frontendUserRepository = $frontendUserRepository;
         $this->persistenceManager = $persistenceManager;
-        $this->querySettings = $querySettings;
 
-        $this->querySettings->setRespectStoragePage(true);
-        $this->imoChiffreRepository->setDefaultQuerySettings($querySettings);
-        $this->imoUnitsRepository->setDefaultQuerySettings($querySettings);
-        $this->imoObjectsRepository->setDefaultQuerySettings($querySettings);
-        $this->chiffreLogRepository->setDefaultQuerySettings($querySettings);
-        $this->userDataRepository->setDefaultQuerySettings($querySettings);
-        $this->frontendUserRepository->setDefaultQuerySettings($querySettings);
-    }
+        // $querySettings->setRespectStoragePage(true);
+        // $querySettings->setStoragePageIds([12]);
+        // $this->imoChiffreRepository->setDefaultQuerySettings($querySettings);
+        // $this->imoUnitsRepository->setDefaultQuerySettings($querySettings);
+        // $this->imoObjectsRepository->setDefaultQuerySettings($querySettings);
+        // $this->chiffreLogRepository->setDefaultQuerySettings($querySettings);
+        // $this->userDataRepository->setDefaultQuerySettings($querySettings);
+        // $this->frontendUserRepository->setDefaultQuerySettings($querySettings);
+}
 
     protected function initializeModuleTemplate(): void
     {
-        $this->storagePid = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['imoispm']['storagePid'];
-        // $this->storagePid = (int)$this->settings['storagePid'];
-        $this->querySettings->setStoragePageIds([$this->storagePid]);
+        // $this->storagePid = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['imoispm']['storagePid'];
         if ($this->moduleTemplate === null) {
             $this->moduleTemplate = $this->moduleTemplateFactory->create($this->request);
         }
@@ -290,12 +285,14 @@ class ISPMBackendController extends ActionController
     public function createUnitAction(ImoUnits $newImoUnit, int $objectuid, int $userid)
     {
         $chiffre = $this->chiffreGenerator->generateChiffre();
+        // $newImoUnit->setPid(1);
         $newImoUnit->setImoobjectUid($objectuid);
         $this->imoUnitsRepository->add($newImoUnit);
 
         // persistenceManager to get the uid
         $this->persistenceManager->persistAll();
         $newImoChiffre = new ImoChiffre();
+        // $newImoChiffre->setPid($this->storagePid);
         $newImoChiffre->setObjectnr($objectuid);
         $newImoChiffre->setUnitnr($newImoUnit->getUid());
         $newImoChiffre->setChiffre($chiffre);

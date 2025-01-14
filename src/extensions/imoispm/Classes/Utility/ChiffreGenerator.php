@@ -3,7 +3,6 @@
 namespace Mg\Imoispm\Utility;
 
 use Mg\Imoispm\Domain\Repository\ImoChiffreRepository as RepositoryImoChiffreRepository;
-
 class ChiffreGenerator
 {
     /**
