@@ -8,7 +8,7 @@ defined('TYPO3') or die('Access denied.');
 /***************
  * Add default RTE configuration
  */
-// $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ispm'] = 'EXT:imoispm/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ispm'] = 'EXT:imoispm/Configuration/RTE/Default.yaml';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['extbase']['debug'] = true;
 
 ExtensionUtility::configurePlugin(

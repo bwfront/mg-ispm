@@ -217,7 +217,7 @@
 				<source>Unbekannte Chiffre</source>
 			</trans-unit>
 			<trans-unit id="fe.ispm.form.check.chiffre.headline" resname="fe.ispm.form.check.chiffre.headline">
-				<source>Check Chiffre</source>
+				<source>Chiffre Suchen</source>
 			</trans-unit>
 			<trans-unit id="fe.ispm.form.check.chiffre.button.search" resname="fe.ispm.form.check.chiffre.button.search">
 				<source>Suchen</source>

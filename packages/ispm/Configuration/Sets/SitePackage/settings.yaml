@@ -18,8 +18,8 @@ page:
     file: 'EXT:ispm/Resources/Public/Images/logo.svg'
     fileInverted: 'EXT:ispm/Resources/Public/Images/logo-inverted.svg'
     width: 192
-    alt: 'My Site Package'
-    linktitle: 'My Site Package'
+    alt: 'ISPM'
+    linktitle: 'ISPM'
   favicon:
     file: 'EXT:ispm/Resources/Public/Icons/favicon.ico'
   fluidtemplate:

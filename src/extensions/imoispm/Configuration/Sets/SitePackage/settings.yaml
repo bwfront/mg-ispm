@@ -1,28 +1,43 @@
-styles:
-  templates:
-    layoutRootPath: 'EXT:imoispm/Resources/Private/ContentElements/Layouts/'
-    partialRootPath: 'EXT:imoispm/Resources/Private/ContentElements/Partials/'
-    templateRootPath: 'EXT:imoispm/Resources/Private/ContentElements/Templates/'
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:imoispm/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:imoispm/Resources/Private/Partials/'
+      templateRootPath: 'EXT:imoispm/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:imoispm/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:imoispm/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:imoispm/Resources/Private/Templates/ContentElements/'
 
 page:
-  pageview:
-    paths: 'EXT:imoispm/Resources/Private/PageView/'
+  logo:
+    file: 'EXT:imoispm/Resources/Public/Icons/logoispmv2.svg'
+    fileInverted: 'EXT:imoispm/Resources/Public/Images/logo-inverted.svg'
+    width: 135
+    alt: 'ISPM'
+    linktitle: 'ISPM'
+  favicon:
+    file: 'EXT:imoispm/Resources/Public/Images/logoispmv2.svg'
+  fluidtemplate:
+    layoutRootPath: 'EXT:imoispm/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:imoispm/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:imoispm/Resources/Private/Templates/Page/'
+  theme:
+    copyright:
+      enable: 0
+    language:
+      enable: 0
+    footernavigation:
+      enable: 0
+    contact:
+        enable: 1
+        data:
+          title: mediagear GmbH
+          addressLine1: Drygalski-Allee 33 Haus D
+          addressLine2: 81477 München
 
-  meta:
-    viewport: 'width=device-width, initial-scale=1'
-    robots: 'index,follow'
-    apple-mobile-web-app-capable: 'no'
-    compatible: 'IE=edge'
-
-  tracking:
-    google:
-      trackingID: ''
-      anonymizeIp: '1'
-
-config:
-  no_cache: '1'
-  removeDefaultJS: '0'
-  admPanel: '1'
-  prefixLocalAnchors: 'all'
-  headerComment: 'build by get.typo3.org/sitepackage'
-  sendCacheHeaders: '1'

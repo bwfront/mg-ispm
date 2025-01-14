@@ -1,0 +1,7 @@
+page:
+  logo:
+    file: 'EXT:imoispm/Resources/Public/Icons/logoispmv2.svg'
+config:
+  no_cache: true
+  admPanel: true
+  sendCacheHeaders: true

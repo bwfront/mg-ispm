@@ -1,0 +1,73 @@
+/* Footer at bottom always: */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.body-bg {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
+#page-footer {
+  margin-top: auto;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.frame-inner .container {
+  padding: 0 !important;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.form-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.fe-flashmessage {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(217, 83, 79, 0.2);
+  border-radius: 0.375rem;
+}
+.fe-flashmessage li {
+  list-style: none;
+}
+.fe-flashmessage .alert-message {
+  margin-bottom: 0;
+}
+.fe-flashmessage .typo3-messages {
+  padding: 0;
+}
+
+.table-object td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar {
+  background: rgba(255, 0, 0, 0.0);
+}

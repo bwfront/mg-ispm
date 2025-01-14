@@ -2,7 +2,7 @@
 
 RTE {
     default {
-        preset = testtitle
+        preset = imoispm
     }
 }
 

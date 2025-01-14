@@ -1,5 +1,4 @@
 name: mg/imoispm
 label: 'imoispm set'
 dependencies:
-  - typo3/fluid-styled-content
-  - typo3/fluid-styled-content-css
+  - bootstrap-package/full

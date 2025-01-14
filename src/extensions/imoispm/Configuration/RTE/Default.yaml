@@ -3,7 +3,6 @@ imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
     - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
+    
 
-editor:
-    config:
-        contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap4-rte.min.css"
+

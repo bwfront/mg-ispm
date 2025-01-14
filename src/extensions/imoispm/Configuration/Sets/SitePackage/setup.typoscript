@@ -1,11 +1,33 @@
 @import './TypoScript/'
-// plugin.tx_imoispm_ispmfrontend {
-//     view {
-//         templateRootPaths.0 = EXT:imoispm/Resources/Private/Templates/
-//         partialRootPaths.0 = EXT:imoispm/Resources/Private/Partials/
-//         layoutRootPaths.0 = EXT:imoispm/Resources/Private/Layouts/
-//     }
-//     persistence {
-//         storagePid = 1
-//     }
-// }
+
+page {
+    includeCSS {
+        theme = EXT:imoispm/Resources/Public/Scss/Theme/theme.scss
+        template = EXT:imoispm/Resources/Public/Css/template.css
+        fonts = EXT:imoispm/Resources/Public/Css/fonts.css
+        default = EXT:imoispm/Resources/Public/Css/Default.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        ispm_scripts = EXT:imoispm/Resources/Public/JavaScript/main.js
+        template_script = EXT:imoispm/Resources/Public/JavaScript/isotope.pkgd.js
+    }
+}
+
+config {
+    debug = 1
+    no_cache = 1
+    contentObjectExceptionHandler = 0
+}
