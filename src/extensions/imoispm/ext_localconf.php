@@ -11,6 +11,9 @@ defined('TYPO3') or die('Access denied.');
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ispm'] = 'EXT:imoispm/Configuration/RTE/Default.yaml';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['extbase']['debug'] = true;
 
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['imoispm']['storagePid'] = 1;
+
+
 ExtensionUtility::configurePlugin(
     'imoispm',
     'ispmfrontend',

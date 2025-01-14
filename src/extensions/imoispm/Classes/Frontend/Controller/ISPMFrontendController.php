@@ -40,6 +40,10 @@ class ISPMFrontendController extends ActionController
     protected $chiffreGenerator;
 
     protected $userDataRepository = null;
+    
+    protected $querySettings = null;
+    
+    protected $storagePid = null;
 
     public function injectPersistenceManager(PersistenceManagerInterface $persistenceManager)
     {
@@ -62,9 +66,9 @@ class ISPMFrontendController extends ActionController
         $this->chiffreLogRepository = $chiffreLogRepository;
         $this->chiffreGenerator = $chiffreGenerator;
         $this->userDataRepository = $userDataRepository;
+        $this->querySettings = $querySettings;
 
-        $querySettings->setRespectStoragePage(true);
-        $querySettings->setStoragePageIds([1]);
+        $this->querySettings->setRespectStoragePage(true);
         $this->imoChiffreRepository->setDefaultQuerySettings($querySettings);
         $this->imoUnitsRepository->setDefaultQuerySettings($querySettings);
         $this->imoObjectsRepository->setDefaultQuerySettings($querySettings);
@@ -74,6 +78,9 @@ class ISPMFrontendController extends ActionController
 
     protected function initializeAction(): void
     {
+        $this->storagePid =  $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['imoispm']['storagePid'];
+        $this->querySettings->setStoragePageIds([$this->storagePid]);
+
         parent::initializeAction();
         
         $this->setCookie(); 
@@ -127,7 +134,7 @@ class ISPMFrontendController extends ActionController
 
     public function saveUserDataAction(UserData $userData) {
         $userData->setUsercookie($this->getCookie());
-        $userData->setPid(1);
+        $userData->setPid($this->storagePid);
         $this->userDataRepository->add($userData);
         $this->persistenceManager->persistAll();
         $arguments = ["userData" => $userData];

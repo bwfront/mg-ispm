@@ -4,14 +4,14 @@ services:
     autoconfigure: true
     public: false
 
+  Mg\Imoispm\:
+    resource: '../Classes/'
+    exclude: '../Classes/Domain/Model/*'
+
   Mg\Imoispm\Hooks\DataMapHookHandler:
     arguments:
       $imoChiffreRepository: '@Mg\Imoispm\Domain\Repository\ImoChiffreRepository'
       $chiffreGenerator: '@Mg\Imoispm\Utility\ChiffreGenerator'
-      
-  Mg\Imoispm\:
-    resource: '../Classes/'
-    exclude: '../Classes/Domain/Model/*'
 
   Mg\Imoispm\Backend\Controller\ISPMBackendController:
     arguments:

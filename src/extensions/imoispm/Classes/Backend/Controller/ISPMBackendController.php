@@ -82,6 +82,9 @@ class ISPMBackendController extends ActionController
      * @var \PersistenceManagerInterface
      */
     protected $persistenceManager = null;
+
+    protected $querySettings = null;
+    protected $storagePid = null;
     
     public function __construct(
         protected readonly ModuleTemplateFactory $moduleTemplateFactory,
@@ -103,9 +106,9 @@ class ISPMBackendController extends ActionController
         $this->chiffreGenerator = $chiffreGenerator;
         $this->frontendUserRepository = $frontendUserRepository;
         $this->persistenceManager = $persistenceManager;
+        $this->querySettings = $querySettings;
 
-        $querySettings->setRespectStoragePage(true);
-        $querySettings->setStoragePageIds([1]);
+        $this->querySettings->setRespectStoragePage(true);
         $this->imoChiffreRepository->setDefaultQuerySettings($querySettings);
         $this->imoUnitsRepository->setDefaultQuerySettings($querySettings);
         $this->imoObjectsRepository->setDefaultQuerySettings($querySettings);
@@ -116,6 +119,9 @@ class ISPMBackendController extends ActionController
 
     protected function initializeModuleTemplate(): void
     {
+        $this->storagePid = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['imoispm']['storagePid'];
+        // $this->storagePid = (int)$this->settings['storagePid'];
+        $this->querySettings->setStoragePageIds([$this->storagePid]);
         if ($this->moduleTemplate === null) {
             $this->moduleTemplate = $this->moduleTemplateFactory->create($this->request);
         }

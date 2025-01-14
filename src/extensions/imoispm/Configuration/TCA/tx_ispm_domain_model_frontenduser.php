@@ -34,9 +34,7 @@ return [
             'exclude' => true,
             'label' => 'Passwort',
             'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim,hashPassword',
+                'type' => 'password',
                 'required' => true,
             ],
         ],
@@ -63,7 +61,7 @@ return [
             'label' => 'Email',
             'config' => [
                 'type' => 'email',
-                'required' => true,
+                'required' => false,
             ],
         ],
         'hidden' => [
